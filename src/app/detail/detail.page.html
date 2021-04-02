@@ -1,51 +1,41 @@
 <ion-header>
   <ion-toolbar color="success">
-    <ion-title>Star War Ships</ion-title>
+    <ion-title>Star Wars</ion-title>
   </ion-toolbar>
 </ion-header>
 
 <ion-content class="ion-padding">
-  
-  <h1>placeholder</h1>
 
-  <ion-list>
-
-    <ion-item *ngFor="let ship of ships" href="/detail/{{ ship.id }}">
-      <ion-label> {{ ship.name }} </ion-label>
-    </ion-item>
-  
-  </ion-list>
-
-  <!-- Layout of details page once I get something to populate
-    <ion-card *ngIf="ships">
+  <!-- Layout of details page once I get something to populate -->
+    <ion-card>
     <ion-card-header>
       <ion-card-title>
-        {{ ships.name }}
+        {{ shipDetail.name }}
       </ion-card-title>
       <ion-card-subtitle>
-        {{ ships.model }}
+        model: {{ shipDetail.model }}
       </ion-card-subtitle>
     </ion-card-header>
 
     <ion-card-content>
 
-      <ion-item>
-        <ion-label> {{ ships.cost_in_credits }}</ion-label>
-      </ion-item>
+      <ion-chip outline="true" color="success">
+        <ion-label> Cost: {{ shipDetail.cost_in_credits }}</ion-label>
+      </ion-chip>
 
-      <ion-item>
-        <ion-label> {{ ships.crew }}</ion-label>
-      </ion-item>
+      <ion-chip outline="true">
+        <ion-label> Crew: {{ shipDetail.crew }}</ion-label>
+      </ion-chip>
 
-      <ion-item>
-        <ion-label> {{ ships.passengers }}</ion-label>
-      </ion-item>
+      <ion-chip outline="true">
+        <ion-label> Passenger Capacity: {{ shipDetail.passengers }}</ion-label>
+      </ion-chip>
 
-      <ion-item>
-        <ion-label> {{ ships.hyperdrive_rating }}</ion-label>
-      </ion-item>
+      <ion-chip outline="true">
+        <ion-label> Hyperdrive Rating: {{ shipDetail.hyperdrive_rating }}</ion-label>
+      </ion-chip>
 
     </ion-card-content>
-  </ion-card> -->
+  </ion-card>
 
 </ion-content>

@@ -9,7 +9,8 @@ import { HttpClient } from '@angular/common/http';
 })
 export class DetailPage implements OnInit {
 
-  public ship:any[] = [];
+  // public ship: any = {};
+  public shipDetail: any= {};
 
   constructor(private route: ActivatedRoute, private httpClient: HttpClient) { }
 
@@ -23,6 +24,7 @@ export class DetailPage implements OnInit {
   
     this.httpClient.get(`https://swapi.dev/api/starships/${starWarsId}`).subscribe( (ship: any) => {
       console.log(ship);
+      this.shipDetail = ship;
     });
   }
 
